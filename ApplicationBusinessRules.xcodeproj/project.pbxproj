@@ -10,6 +10,8 @@
 		E9FEFE6E23A23F860023C9A3 /* ApplicationBusinessRules.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FEFE6423A23F850023C9A3 /* ApplicationBusinessRules.framework */; };
 		E9FEFE7323A23F860023C9A3 /* ApplicationBusinessRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEFE7223A23F860023C9A3 /* ApplicationBusinessRulesTests.swift */; };
 		E9FEFE7523A23F860023C9A3 /* ApplicationBusinessRules.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FEFE6723A23F850023C9A3 /* ApplicationBusinessRules.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9FEFEAE23A25ECE0023C9A3 /* ShowDetailForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEFEAD23A25ECE0023C9A3 /* ShowDetailForecastUseCase.swift */; };
+		E9FEFEB123A25F130023C9A3 /* ShowDetailForecastUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEFEB023A25F130023C9A3 /* ShowDetailForecastUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E9FEFE6D23A23F860023C9A3 /* ApplicationBusinessRulesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationBusinessRulesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FEFE7223A23F860023C9A3 /* ApplicationBusinessRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationBusinessRulesTests.swift; sourceTree = "<group>"; };
 		E9FEFE7423A23F860023C9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FEFEAD23A25ECE0023C9A3 /* ShowDetailForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailForecastUseCase.swift; sourceTree = "<group>"; };
+		E9FEFEB023A25F130023C9A3 /* ShowDetailForecastUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailForecastUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		E9FEFE6623A23F850023C9A3 /* ApplicationBusinessRules */ = {
 			isa = PBXGroup;
 			children = (
+				E9FEFEAC23A25D760023C9A3 /* UseCases */,
 				E9FEFE6723A23F850023C9A3 /* ApplicationBusinessRules.h */,
 				E9FEFE6823A23F860023C9A3 /* Info.plist */,
 			);
@@ -80,10 +85,27 @@
 		E9FEFE7123A23F860023C9A3 /* ApplicationBusinessRulesTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9FEFEAF23A25EFE0023C9A3 /* UseCases */,
 				E9FEFE7223A23F860023C9A3 /* ApplicationBusinessRulesTests.swift */,
 				E9FEFE7423A23F860023C9A3 /* Info.plist */,
 			);
 			path = ApplicationBusinessRulesTests;
+			sourceTree = "<group>";
+		};
+		E9FEFEAC23A25D760023C9A3 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E9FEFEAD23A25ECE0023C9A3 /* ShowDetailForecastUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E9FEFEAF23A25EFE0023C9A3 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E9FEFEB023A25F130023C9A3 /* ShowDetailForecastUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,7 @@
 				TargetAttributes = {
 					E9FEFE6323A23F850023C9A3 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					E9FEFE6C23A23F860023C9A3 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -195,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FEFEAE23A25ECE0023C9A3 /* ShowDetailForecastUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FEFEB123A25F130023C9A3 /* ShowDetailForecastUseCaseTests.swift in Sources */,
 				E9FEFE7323A23F860023C9A3 /* ApplicationBusinessRulesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +365,7 @@
 		E9FEFE7923A23F860023C9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 33PZEFM56C;
@@ -356,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikokiko.ApplicationBusinessRules;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +391,7 @@
 		E9FEFE7A23A23F860023C9A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 33PZEFM56C;
@@ -388,6 +416,7 @@
 		E9FEFE7C23A23F860023C9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33PZEFM56C;
 				INFOPLIST_FILE = ApplicationBusinessRulesTests/Info.plist;
@@ -406,6 +435,7 @@
 		E9FEFE7D23A23F860023C9A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33PZEFM56C;
 				INFOPLIST_FILE = ApplicationBusinessRulesTests/Info.plist;
