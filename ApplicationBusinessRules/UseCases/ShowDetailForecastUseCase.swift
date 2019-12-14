@@ -8,20 +8,15 @@
 
 import Foundation
 
-
 protocol ShowDetailForecastUseCaseProtocol {
     func showDetailForecats() -> Destination
 }
 
 struct ShowDetailForecastUseCase: ShowDetailForecastUseCaseProtocol {
+    
+    let user: ApplicationUser
+    
     func showDetailForecats() -> Destination {
-        return .ads
+        return user.shouldShowAds ? .ads : .detailForecast
     }
 }
-
-enum Destination {
-    case ads
-    case detailForecast
-}
-
-

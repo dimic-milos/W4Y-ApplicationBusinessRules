@@ -13,13 +13,25 @@ class ShowDetailForecastUseCaseTests: XCTestCase {
     
     func test_showDetailForecast_shouldShowAdsValueIsTrue_routesToAds() {
         // Given
-        let sut = ShowDetailForecastUseCase()
+        let sut = ShowDetailForecastUseCase(user: ApplicationUser(shouldShowAds: true))
         
         // When
         let result = sut.showDetailForecats()
         
         // Then
         XCTAssertEqual(result, Destination.ads)
+        
+    }
+    
+    func test_showDetailForecast_shouldShowAdsValueIsFalse_routesToDetailForecast() {
+        // Given
+        let sut = ShowDetailForecastUseCase(user: ApplicationUser(shouldShowAds: false))
+        
+        // When
+        let result = sut.showDetailForecats()
+        
+        // Then
+        XCTAssertEqual(result, Destination.detailForecast)
         
     }
 }
